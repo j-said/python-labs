@@ -1,10 +1,11 @@
-пшеclass LapTop():
+class LapTop:
     def __init__(self, proc="Name", cpu=0.0, ram=0.0, brand="Name"):
         # Приватні поля
         self.__proc = proc
         self.__cpu = cpu
         self.__ram = ram
         self.__brand = brand
+
     # Деструктор
     def __del__(self):
         print(f"Знищено {self.__brand}!")
@@ -13,29 +14,31 @@
     @property
     def proc(self):
         return self.__proc
-    
+
     @proc.setter
     def proc(self, proc):
         self.__proc = proc
-    
+
     @property
     def cpu(self):
         return self.__cpu
+
     @cpu.setter
     def cpu(self, cpu):
         self.__cpu = cpu
-    
+
     @property
     def ram(self):
         return self.__ram
+
     @ram.setter
     def ram(self, ram):
         self.__ram = ram
-    
+
     @property
     def brand(self):
         return self.__brand
-    
+
     @brand.setter
     def brand(self, brand):
         self.__brand = brand
@@ -46,7 +49,8 @@
     def __repr__(self):
         return f"LapTop(proc = '{self.__proc}', cpu={self.__cpu}, ram={self.__ram}, brand= '{self.__brand}')"
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     object_1 = LapTop("Intel", 2.2, 16, "Lenovo")
     object_2 = LapTop("Intel", 3.4, 8, "Asus")
     object_3 = LapTop("Intel", 4.0, 12, "HP")
