@@ -1,5 +1,3 @@
-
-
 class LapTop():
     def __init__(self, proc="Name", cpu=0.0, ram=0.0, brand="Name"):
         # Приватні поля
@@ -12,28 +10,34 @@ class LapTop():
         print(f"Знищено {self.__brand}!")
         del self
 
-    def get_proc(self):
+    @property
+    def proc(self):
         return self.__proc
-
-    def set_proc(self, proc):
+    
+    @proc.setter
+    def proc(self, proc):
         self.__proc = proc
-
-    def get_cpu(self):
+    
+    @property
+    def cpu(self):
         return self.__cpu
-
-    def set_cpu(self, cpu):
+    @cpu.setter
+    def cpu(self, cpu):
         self.__cpu = cpu
-
-    def get_ram(self):
+    
+    @property
+    def ram(self):
         return self.__ram
-
-    def set_ram(self, ram):
+    @ram.setter
+    def ram(self, ram):
         self.__ram = ram
-
-    def get_brand(self):
+    
+    @property
+    def brand(self):
         return self.__brand
-
-    def set_brand(self, brand):
+    
+    @brand.setter
+    def brand(self, brand):
         self.__brand = brand
 
     def __str__(self):
